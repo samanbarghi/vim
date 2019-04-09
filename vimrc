@@ -194,7 +194,7 @@ let g:syntastic_check_on_wq = 0
 
 """""""""""""""""""""""""""""""
 " Python
-Plug 'python-mode/python-mode', { 'branch': 'develop' }
+Plug 'python-mode/python-mode', { 'branch': 'develop', 'for' : 'python' }
 
 """""""""""""""""""""""""""""""
 " Go
@@ -217,6 +217,15 @@ Plug 'wting/rust.vim'
 Plug 'tomasr/molokai'
 let g:molokai_original = 1
 
+
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+
+" Install user-supplied Bundles {{{
+let s:extrarc = expand(s:dotvim . '/extra.vimrc')
+if filereadable(s:extrarc)
+    exec ':so ' . s:extrarc
+endif
+" }}}
 
 " Any valid git URL is allowed
 "Plug 'https://github.com/junegunn/vim-github-dashboard.git'
@@ -513,7 +522,7 @@ nmap <tab> :NERDTreeToggle<cr>
 
 " . folding {{{
 
-set foldlevelstart=0
+set foldlevelstart=5
 set foldmethod=syntax
 
 " Space to toggle folds.
@@ -586,11 +595,9 @@ vnoremap <leader>G :w !gist -p -t %:e \| pbcopy<cr>
 
 " }}}
 
-""""""""""""""""""""""""""""""""""""""
-" my changes
 
-set foldlevelstart=20
-set foldlevel=20
+""""""""""""""""""""""""""""""""""""""
+
 " Load addidional configuration (ie to overwrite shorcuts) {{{
 let s:afterrc = expand(s:dotvim . '/after.vimrc')
 if filereadable(s:afterrc)
