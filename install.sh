@@ -28,7 +28,7 @@ fi
 
 if [ ! -d "$INSTALLDIR" ]; then
     echo "As we can't find sbvim in the current directory, we will create it."
-    git clone https://github.com/sbarghi/vim.git $INSTALLDIR
+    git clone https://github.com/samanbarghi/vim.git $INSTALLDIR
     create_symlinks
     cd $INSTALLDIR
 
