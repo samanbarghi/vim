@@ -20,8 +20,7 @@ let s:beforerc = expand(s:dotvim . '/before.vimrc')
 let mapleader = ","
 let maplocalleader = "\\"
 if filereadable(s:beforerc)
-        exec ':so ' . s:beforerc
-    endif
+    exec ':so ' . s:beforerc
 endif
 
 " - Avoid using standard Vim directory names like 'plugin'
