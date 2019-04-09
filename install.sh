@@ -31,6 +31,7 @@ if [ ! -d "$INSTALLDIR" ]; then
     git clone https://github.com/samanbarghi/vim.git $INSTALLDIR
     create_symlinks
     cd $INSTALLDIR
+    mkdir -p tmp/backup tmp/swap tmp/undo
 
 else
     echo "Seems like you already installed vim settinsg, just updating."
