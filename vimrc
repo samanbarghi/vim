@@ -207,6 +207,8 @@ let g:go_disable_autoinstall = 1
 """""""""""""""""""""""""""""""
 " Clang: TODO: check other plugins
 Plug 'rhysd/vim-clang-format'
+nmap <Leader>k :ClangFormat<CR>
+vmap <Leader>k :ClangFormat<CR>
 
 
 """""""""""""""""""""""""""""""
